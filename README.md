@@ -1,2 +1,0 @@
-# moviebot
-Telegram Movie Bot
