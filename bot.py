@@ -1,0 +1,13 @@
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+
+TOKEN=  "8275042245:AAGt25vibdBesOz3cgG-CYO6r147M5a-LTg"
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Salom! Bot ishga tushdi. 🚀")
+
+app = Application.builder().token(TOKEN).build()
+app.add_handler(CommandHandler("start", start))
+
+print("Bot ishga tushdi...")
+app.run_polling()
